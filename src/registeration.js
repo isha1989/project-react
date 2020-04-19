@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Nav from 'react-bootstrap/Nav'
 import CarouselComponent from "./components/carousel.component";
-import Eligibility from "./eligibility";
+import FormContainer from "./containers/FormContainer";
 const Registeration = () =>
 {
     return(
@@ -31,9 +31,8 @@ const Registeration = () =>
   
 </Nav></Col>
     <Col sm={8}>
-        <h1> Registeration </h1>
-        
-    
+      <FormContainer />
+
     </Col>
   </Row>
  
