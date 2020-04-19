@@ -5,10 +5,10 @@ import './App.css';
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { NavigationBar } from './components/NavigationBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Nav from 'react-bootstrap/Nav'
 import CarouselComponent from "./components/carousel.component";
+import Calc from "./containers/Calc";
 
 const Hour = () =>
 {
@@ -32,7 +32,7 @@ const Hour = () =>
 </Nav></Col>
     <Col sm={8}>
         <h1> Hours </h1>
-    
+  <Calc />
     </Col>
   </Row>
  
