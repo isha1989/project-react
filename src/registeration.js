@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav'
 import CarouselComponent from "./components/carousel.component";
 import FormContainer from "./containers/FormContainer";
+
 const Registeration = () =>
 {
     return(
@@ -31,6 +32,7 @@ const Registeration = () =>
   
 </Nav></Col>
     <Col sm={8}>
+     
       <FormContainer />
 
     </Col>
