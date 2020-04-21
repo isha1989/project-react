@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
 import CheckBox from "../components/CheckBox";
 import Input from "../components/Input";
 import TextArea from "../components/TextArea";
@@ -104,9 +105,11 @@ class FormContainer extends Component {
 
   handleFormSubmit(e) {
     e.preventDefault();
-    let userData = this.state.newUser;
-
-    fetch("", {
+    {/*let userData = this.state.newUser;*/}
+    let userData=this.state.newUser.name;
+    alert(userData);
+  
+    fetch("http://localhost:3000/Registeration#/", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {
@@ -117,7 +120,7 @@ class FormContainer extends Component {
       response.json().then(data => {
         console.log("Successful" + data);
       });
-    });
+    })
   }
 
   handleClearForm(e) {
