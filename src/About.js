@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Form } from "react-bootstrap";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,Link
+  Route, Link
 } from "react-router-dom";
 import { NavigationBar } from './components/NavigationBar';
 import Nav from 'react-bootstrap/Nav';
@@ -18,6 +18,7 @@ import Workplacement from "./workplacement";
 import Registeration from "./registeration";
 
 
+
 const About = () => {
   return (
 
@@ -28,11 +29,11 @@ const About = () => {
         <CarouselComponent />
         <hr />
         <Container>
-       
+
           <Row>
 
             <Col sm={4}>
-              <Nav  defaultActiveKey="/home" className="flex-column">
+              <Nav defaultActiveKey="/home" className="flex-column">
                 <Nav.Link href="/About" >About JHSS</Nav.Link>
                 <Nav.Link href="/FineOption">About Fine option program</Nav.Link>
                 <Nav.Link href="/Hour">Hours calculator</Nav.Link>
@@ -44,6 +45,7 @@ const About = () => {
             </Col>
             <Col sm={8}>
               <h1>About John Howard Society</h1>
+             
               <p>
                 The John Howard Society is a Canadian non-profit organization that seeks href develop understanding and
                 effective responses href the problem of crime and prison reform. It is named after John Howard, a
@@ -81,26 +83,26 @@ const About = () => {
 
             </Col>
           </Row>
-        
+
           <Switch>
-          <Route exact path="/FineOption">
-            <FineOption />
-          </Route>
-          
-          <Route path="/Eligibility">
-            <Eligibility />
-          </Route>
-          <Route path="/Registeration">
-            <Registeration />
-          </Route>
-          <Route path="/Workplacement">
-            <Workplacement />
+            <Route exact path="/FineOption">
+              <FineOption />
+            </Route>
 
-          </Route>
-          <Route path="/Hour">
-            <Hour />
+            <Route path="/Eligibility">
+              <Eligibility />
+            </Route>
+            <Route path="/Registeration">
+              <Registeration />
+            </Route>
+            <Route path="/Workplacement">
+              <Workplacement />
 
-          </Route>
+            </Route>
+            <Route path="/Hour">
+              <Hour />
+
+            </Route>
           </Switch>
         </Container>
       </Router>
