@@ -105,11 +105,12 @@ class FormContainer extends Component {
 
   handleFormSubmit(e) {
     e.preventDefault();
+   
     {/*let userData = this.state.newUser;*/}
     let userData=this.state.newUser.name;
     alert(userData);
   
-    fetch("http://localhost:3000/Registeration#/", {
+    fetch("", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {
