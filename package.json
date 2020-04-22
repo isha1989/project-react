@@ -11,6 +11,7 @@
     "carousel": "0.0.3",
     "file-saver": "^2.0.2",
     "google-map-react": "^1.1.7",
+    "google-maps-react": "^2.0.6",
     "jquery": "^3.5.0",
     "material-ui": "^0.20.2",
     "ng-gapi": "0.0.73",
@@ -20,7 +21,9 @@
     "react-csv": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-google-maps": "^9.4.5",
+    "react-iframe": "^1.8.0",
     "react-list": "^0.8.13",
+    "react-mailto": "^0.4.0",
     "react-responsive-carousel": "^3.2.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.4.1",
@@ -49,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "html-loader": "^1.1.0"
   }
 }
