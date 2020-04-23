@@ -7,7 +7,17 @@ import CarouselComponent from "./components/carousel.component";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
+import styled from 'styled-components';
+const Styles = styled.div`
+  .navbar { background-color: black; }
+  a, .navbar-nav, .navbar-light .nav-link {
+    
+    color: black;
+    &:hover { color: gray; }
+  }
+  
+ 
+`;
 
 
 
@@ -22,16 +32,17 @@ const FineOption = () =>
     <hr />
     <Container>
   <Row>
-    <Col sm={4}><Nav defaultActiveKey="/home"  className="flex-column">
-   
-  <Nav.Link href="#About">About JHSS</Nav.Link>
-  <Nav.Link href="#FineOption">About Fine option program</Nav.Link>
-  <Nav.Link href="#Hour">Hours calculator</Nav.Link> 
-  <Nav.Link href="#Elg">Eligibility</Nav.Link>
-  <Nav.Link href="#Registeration">Registeration form</Nav.Link>
-  <Nav.Link href="#Workplacement">Choice of work placement</Nav.Link>
-  
-</Nav></Col>
+    <Col sm={4}>
+      <Styles>
+    <Nav defaultActiveKey="/home" className="flex-column">
+                <Nav.Link href="/About" >About JHSS</Nav.Link>
+                <Nav.Link href="/fineoption">About Fine option program</Nav.Link>
+                <Nav.Link href="/Hour">Hours calculator</Nav.Link>
+                <Nav.Link href="/Eligibility">Eligibility</Nav.Link>
+                <Nav.Link href="/Registeration">Registeration form</Nav.Link>
+                <Nav.Link href="/Workplacement">Choice of work placement</Nav.Link>
+
+            </Nav></Styles></Col>
     <Col sm={8}>
     <h1>About Fine option program</h1>
         <p>
