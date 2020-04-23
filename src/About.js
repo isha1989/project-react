@@ -16,8 +16,17 @@ import FineOption from "./fineoption";
 import Hour from "./hour";
 import Workplacement from "./workplacement";
 import Registeration from "./registeration";
-
-
+import styled from 'styled-components';
+const Styles = styled.div`
+  .navbar { background-color: black; }
+  a, .navbar-nav, .navbar-light .nav-link {
+    
+    color: black;
+    &:hover { color: gray; }
+  }
+  
+ 
+`;
 const About = () => {
   return (
 
@@ -30,17 +39,18 @@ const About = () => {
         <Container>
 
           <Row>
-
-            <Col sm={4}>
-              <Nav defaultActiveKey="/home" className="flex-column">
-                <Nav.Link href="/About" >About JHSS</Nav.Link>
+          <Col sm={4}>
+            <Styles>
+                   <Nav defaultActiveKey="/home"  className="flex-column">
+                <Nav.Link href="/About"  >About JHSS</Nav.Link>
                 <Nav.Link href="/fineoption">About Fine option program</Nav.Link>
                 <Nav.Link href="/Hour">Hours calculator</Nav.Link>
                 <Nav.Link href="/Eligibility">Eligibility</Nav.Link>
                 <Nav.Link href="/Registeration">Registeration form</Nav.Link>
                 <Nav.Link href="/Workplacement">Choice of work placement</Nav.Link>
 
-              </Nav>
+            </Nav>
+            </Styles>
             </Col>
             <Col sm={8}>
               <h1>About John Howard Society</h1>
@@ -89,8 +99,10 @@ const About = () => {
             </Col>
           </Row>
 
-          <Switch>
-            <Route exact path="/FineOption">
+         
+        </Container>
+        <Switch>
+            <Route path="/FineOption">
               <FineOption />
             </Route>
 
@@ -109,7 +121,6 @@ const About = () => {
 
             </Route>
           </Switch>
-        </Container>
       </Router>
     </React.Fragment>
   );
