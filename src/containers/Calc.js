@@ -9,7 +9,7 @@
       
         exe1(){
           console.log("FineAmount: ", this.state.FineAmount, " - MinWage: ", this.state.MinWage)
-          this.setState({ Hours: parseInt(this.state.FineAmount) / parseInt(this.state.MinWage) })
+          this.setState({Hours: parseInt(this.state.FineAmount) / parseInt(this.state.MinWage) })
           console.log(this.state)
         }
         exe2() {
