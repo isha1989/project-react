@@ -7,6 +7,17 @@ import CarouselComponent from "./components/carousel.component";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import styled from 'styled-components';
+const Styles = styled.div`
+  .navbar { background-color: black; }
+  a, .navbar-nav, .navbar-light .nav-link {
+    
+    color: black;
+    &:hover { color: gray; }
+  }
+  
+ 
+`;
 const Eligibility = () => {
   return (
     <React.Fragment>
@@ -17,7 +28,7 @@ const Eligibility = () => {
         <hr />
         <Container>
           <Row>
-            <Col sm={4}><Nav defaultActiveKey="/home" className="flex-column">
+            <Col sm={4}><Styles><Nav defaultActiveKey="/home" className="flex-column">
               <Nav.Link href="/About">About JHSS</Nav.Link>
               <Nav.Link href="/FineOption">About Fine option program</Nav.Link>
               <Nav.Link href="/Hour">Hours calculator</Nav.Link>
@@ -25,7 +36,7 @@ const Eligibility = () => {
               <Nav.Link href="/Registeration">Registeration form</Nav.Link>
               <Nav.Link href="Workplacement">Choice of work placement</Nav.Link>
 
-            </Nav></Col>
+            </Nav></Styles></Col>
             <Col sm={8}>
               <h1>Eligibilty for Fine option program</h1>
               <p>
